@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>フォーム部品のカタログ</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>新人エンジニア アンケート</h1>
+        <p>以下の項目に入力してください。</p>
+
+        <form>
+            <div class="form-group">
+                <label for="fullname">お名前</label>
+                <input type="text" id="fullname" placeholder="例：山田 太郎">
+            </div>
+
+            <div class="form-group">
+                <label>使用している PC（どちらか1つ）</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="pc_1" value="win"> Windows
+                    </label>
+                    <label>
+                        <input type="radio" name="pc_2" value="mac"> Mac
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>興味のある技術（複数選択可）</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="tech_java">
+                    <label for="">Java</label> <input type="checkbox" id="tech_docker">
+                    <label for="">Docker</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>所属部署</label>
+            </div>
+
+            <div class="form-group">
+                <label>意気込み</label>
+            </div>
+
+            <button type="button" class="btn-submit">回答を完了する</button>
+        </form>
+    </div>
+</body>
+
+</html>

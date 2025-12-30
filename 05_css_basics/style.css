@@ -1,0 +1,66 @@
+/* --- おまじない --- */
+* {
+    /* padding や border を幅(width)の中に含める設定 */
+    /* これがないと、幅の計算が非常に面倒になります */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+/* --- ここから下を編集してください --- */
+
+/* 手順 3: カード全体の枠線と幅 */
+.product-card {
+    background-color: white;
+    /* ここに border と width を追加 */
+
+    /* (参考) カードの中央寄せ */
+    margin: 0 auto;
+}
+
+.product-image img {
+    width: 100%;
+    /* 画像をカードの幅に合わせる */
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+    /* カードの内側の余白 */
+}
+
+/* 手順 1: 商品名の文字装飾 */
+.product-title {
+    margin-top: 0;
+    /* ここに font-size, color, font-weight を追加 */
+
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    /* 行間を読みやすく */
+}
+
+/* 手順 4: 価格の下に隙間を作る */
+.product-price {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+    /* ここに margin-bottom を追加 */
+
+}
+
+/* 手順 2: ボタンを大きく押しやすく */
+.btn-buy {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* ここに padding, background-color, color を追加 */
+
+}

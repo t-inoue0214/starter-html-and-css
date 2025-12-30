@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    /* ここを書き換えてみましょう */
+    color: blue;
+    border-bottom: 2px solid #ddd;
+}
