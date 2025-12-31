@@ -52,3 +52,9 @@ starter-html-and-css/
 ├── README.md              <-- このファイル
 └── run_web_server.sh      <-- サーバー起動用スクリプト
 ```
+
+## 利用上の注意
+
+- `Github`の`Codespace`を利用します。`Codespace`は設定によってはコストがかかるものなので [Codespace の利用上の注意](./CODE_SPACES_SERICE.md) はよく確認してください。
+- コストをかけないためにも、セキュリティの意味でも、使い終わったら [停止方法](./CODE_SPACES_SERICE.md#停止方法) に従って停止することを推奨します。
+- パスワードは各自考えてください。また、間違えてメモなどをコミットしないように気を付けてください。
