@@ -119,4 +119,4 @@ HTML のタグはたくさんありますが、初心者がすべて覚える必
 ## 完了したら
 
 ブラウザで自分の自己紹介が表示されていれば成功です！<br>
-次は **03_html_attributes** へ進みます。
+次は [**03_html_attributes**](../03_html_attributes/README.md) へ進みます。
