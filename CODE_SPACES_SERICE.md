@@ -18,15 +18,17 @@ GitHub には以下のアカウント種別があります。
 
 →　**課金を避けたい場合は、必ず「個人アカウント」かつ「Free プラン」で利用する**
 
+---
+
 ### 1-2. プランの確認方法
 
 1. **GitHub の右上プロフィールアイコン**をクリックして **Settings** をクリックする
 
-   ![github-my-icon](/assets/img/github-my-icon.png)
+   ![github-my-icon](/assets/github-my-icon.png)
 
 2. 左メニューの **Billing and licensing** をクリックして、**Licensing**をクリックして開く
 
-   ![github-licensing](/assets/img/github-licensing.png)
+   ![github-licensing](/assets/github-licensing.png)
 
 3. **Current GitHub base plan**が以下になっていることを確認
 
@@ -60,21 +62,18 @@ GitHub には以下のアカウント種別があります。
 
 ## 2. 開始方法
 
+面倒な環境構築は不要です。ブラウザさえあれば、すぐに学習を始められます。
+
 1. Webブラウザで、このリポジトリの **[ <> Code ]** タブを開き、右上の緑色の **[ <> Code ]** ボタンをクリックします。
-
-   ![github-code-pulldown](/assets/img/github-code-pulldown.png)
-
-1. **[ Codespaces ]** タブを選択します。
-1. **[ Create codespace on main ]** ボタンをクリックします。
-
-   ![github-code-start](/assets/img/github-code-start.png)
+2. **[ Codespaces ]** タブを選択します。
+3. **[ Create codespace on main ]** ボタンをクリックします。
 
 ## 3. 停止方法
 
 1. `Code`タブに移動し、右上にある緑色の`code`のプルダウンメニューを開き、`Codespace`タブを開き、`Active`の右側にある三点リーダー（・・・）をクリックして`Delete`をクリックします。
 
-   ![stop-code-space](/assets/img/stop-code-space.png)
+   ![stop-code-space](/assets/stop-code-space.png)
 
 1. 確認ダイアログが表示されるので`Delete`をクリックします。
 
-   ![delete-code-space](/assets/img/delete-code-space.png)
+   ![delete-code-space](/assets/delete-code-space.png)
