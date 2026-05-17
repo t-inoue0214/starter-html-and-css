@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>レイアウトの練習</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,16 +26,16 @@
             <h2>お問い合わせ</h2>
             <form>
                 <div class="form-row">
-                    <label class="form-label">お名前</label>
+                    <label class="form-label" for="contact-name">お名前</label>
                     <div class="input-group">
-                        <input type="text" placeholder="名前を入力">
+                        <input type="text" id="contact-name" placeholder="名前を入力">
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <label class="form-label">メールアドレス</label>
+                    <label class="form-label" for="contact-email">メールアドレス</label>
                     <div class="input-group">
-                        <input type="text" value="invalid-email" class="input-error">
+                        <input type="email" id="contact-email" value="invalid-email" class="input-error">
                         <p class="error-msg">※ メールアドレスの形式が正しくありません。</p>
                     </div>
                 </div>
@@ -57,8 +58,6 @@
 
         <div class="dummy-content">
             <p>↓ スクロールして固定ボタンを確認 ↓</p>
-            <br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br>
         </div>
     </main>
 

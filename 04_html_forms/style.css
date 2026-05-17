@@ -1,3 +1,8 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif;
     background-color: #e9ecef;
@@ -50,8 +55,6 @@ select {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
-    /* 枠線を含めて幅を計算 */
 }
 
 /* フォーカス時のデザイン（青枠が出る） */

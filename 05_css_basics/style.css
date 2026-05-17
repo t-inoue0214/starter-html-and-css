@@ -1,7 +1,5 @@
-/* --- おまじない --- */
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
 * {
-    /* padding や border を幅(width)の中に含める設定 */
-    /* これがないと、幅の計算が非常に面倒になります */
     box-sizing: border-box;
 }
 

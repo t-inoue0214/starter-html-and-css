@@ -1,3 +1,8 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
 /* 全体のレイアウト */
 body {
     font-family: sans-serif;

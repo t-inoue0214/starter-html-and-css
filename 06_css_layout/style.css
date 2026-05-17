@@ -1,3 +1,8 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
 /* ベース */
 body {
     font-family: sans-serif;
@@ -134,6 +139,7 @@ main {
 }
 
 .dummy-content {
+    height: 600px; /* position: fixed の確認用スクロール領域 */
     text-align: center;
     color: #999;
     margin-top: 50px;
