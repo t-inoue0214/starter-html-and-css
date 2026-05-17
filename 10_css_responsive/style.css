@@ -1,0 +1,225 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
+/* --- CSS 変数（デザイントークン） --- */
+:root {
+    --color-primary: #3498db;
+    --color-primary-dark: #2980b9;
+    --color-text: #2c3e50;
+    --color-text-muted: #666;
+    --color-bg: #f0f2f5;
+    --color-bg-card: #fff;
+    --color-header: #2c3e50;
+    --color-border: #eee;
+
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 40px;
+}
+
+/* --- ベース --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+/* --- サイトヘッダー --- */
+.site-header {
+    background-color: var(--color-header);
+    padding: 0 var(--spacing-xl);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+}
+
+.site-logo {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* --- ナビゲーション --- */
+/* 注意: ここはデスクトップ（横並び）の状態で事前記入されています。
+   手順 2 で、モバイルファーストの考え方に従い
+   flex-direction: column と height: auto に変更してください。
+   手順 3 の @media ブロック内で、768px 以上では row と 56px に戻します。 */
+.site-nav {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--spacing-xl);
+    /* 手順 2: flex-direction を column に変更し、gap を var(--spacing-sm) に変更する */
+}
+
+.nav-list a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    padding: 4px 0;
+    display: block;
+}
+
+.nav-list a:hover {
+    color: #fff;
+}
+
+.nav-list a[aria-current="page"] {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* --- メインコンテンツ --- */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.post-list-section {
+    /* セクション全体の余白 */
+}
+
+.section-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* --- 記事グリッド ---
+   手順 2: .post-grid にモバイル用のスタイルを設定する
+   - display: flex
+   - flex-wrap: wrap
+   - gap: var(--spacing-md)
+*/
+.post-grid {
+    /* ここに display: flex, flex-wrap: wrap, gap を設定する */
+}
+
+/* --- 記事カード --- */
+/* 手順 2: .post-card の width を 100% に設定する（モバイルで縦1列表示） */
+.post-card {
+    background-color: var(--color-bg-card);
+    border-radius: 8px;
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* ここに width を設定する */
+}
+
+.post-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.post-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.post-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+.post-body {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0 0 var(--spacing-md);
+}
+
+.post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+    margin-top: 0;
+}
+
+.post-meta {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.btn-read-more {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-read-more:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* --- サイトフッター --- */
+.site-footer {
+    background-color: var(--color-header);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.footer-text {
+    color: #ccc;
+    font-size: 0.875rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================================
+   手順 3: タブレット（768px 以上）のスタイル
+   @media (min-width: 768px) のブロック内に書く = モバイルファースト
+   ============================================================ */
+
+/* ここに @media (min-width: 768px) { ... } を書く */
+/* 設定する内容:
+   - .post-card の width を calc(50% - var(--spacing-md) / 2) にする
+   - .site-nav の height を 56px に戻す
+   - .nav-list の flex-direction を row に戻し、gap を var(--spacing-xl) にする
+*/
+
+
+/* ============================================================
+   手順 4: デスクトップ（1024px 以上）のスタイル
+   @media (min-width: 1024px) のブロック内に書く
+   ============================================================ */
+
+/* ここに @media (min-width: 1024px) { ... } を書く */
+/* 設定する内容:
+   - .post-card の width を calc(33.333% - var(--spacing-md) * 2 / 3) にする
+*/

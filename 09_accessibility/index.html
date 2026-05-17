@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アクセシビリティの基礎</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="メインナビゲーション">
+            <ul class="nav-list">
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">サービス</a></li>
+                <li><a href="#" aria-current="page">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>お問い合わせ</h1>
+
+        <form class="contact-form" novalidate>
+            <div class="form-group">
+                <label for="name">お名前 <span class="required" aria-label="必須">*</span></label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="山田 太郎"
+                    aria-describedby="name-hint"
+                />
+                <p id="name-hint" class="hint-text">フルネームで入力してください</p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">メールアドレス <span class="required" aria-label="必須">*</span></label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="example@email.com"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="message">お問い合わせ内容</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    aria-describedby="message-hint"
+                ></textarea>
+                <p id="message-hint" class="hint-text">200文字以内でご入力ください</p>
+            </div>
+
+            <div class="form-actions">
+                <!-- アクセシビリティ的に正しいボタン: <button> は元からキーボード操作・スクリーンリーダーに対応している -->
+                <button type="submit" class="btn-submit">送信する</button>
+
+                <!-- 比較用: アクセシビリティ的に問題のある実装（コメントアウト） -->
+                <!-- <div class="btn-submit-bad" onclick="...">送信する</div> -->
+                <!--
+                    なぜ <div> のボタンはダメか:
+                    - Tab キーでフォーカスが当たらない（tabindex を追加しないかぎり）
+                    - Enter キーや Space キーで押せない
+                    - スクリーンリーダーが「ボタン」と読み上げない
+                    - role="button" + tabindex + キーボードイベント を手動で追加しなければならない
+                    → <button> を使えばブラウザがすべて無料で提供してくれる
+                -->
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

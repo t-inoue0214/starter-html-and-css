@@ -1,0 +1,109 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
+/* --- CSS 変数（デザイントークン） --- */
+:root {
+    /* 手順 1: カラーと余白スケールの変数をここに追加する */
+
+}
+
+
+/* --- ベース --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    /* 手順 4: background-color を var(--color-bg) で設定 */
+}
+
+/* --- サイトヘッダー --- */
+.site-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 16px 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* --- メインコンテンツ --- */
+main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.page-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+
+/* --- 記事カード --- */
+.post-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* 手順 3: padding を var(--spacing-lg) で設定 */
+    /* 手順 4: background-color を var(--color-bg-card) で設定 */
+}
+
+.post-header {
+    /* 手順 3: margin-bottom を var(--spacing-md) で設定 */
+}
+
+/* カテゴリラベル */
+.post-category {
+    display: inline-block;
+
+    /* 手順 2: font-size: 0.75rem, font-weight: 700, letter-spacing: 0.1em を設定 */
+    /* 手順 3: margin-bottom を var(--spacing-xs) で設定 */
+    /* 手順 4: color を var(--color-primary) で設定 */
+}
+
+/* 記事タイトル */
+.post-title {
+    margin-top: 0;
+
+    /* 手順 2: font-size: 1.5rem, font-weight: 700, line-height: 1.4 を設定 */
+    /* 手順 3: margin-bottom を var(--spacing-sm) で設定 */
+    /* 手順 4: color を var(--color-text) で設定 */
+}
+
+/* メタ情報（日付・読了時間） */
+.post-meta {
+    margin: 0;
+
+    /* 手順 2: font-size: 0.875rem を設定 */
+    /* 手順 4: color を var(--color-text-muted) で設定 */
+}
+
+/* 本文 */
+.post-body {
+    margin: 0;
+
+    /* 手順 2: font-size: 1rem, line-height: 1.7 を設定 */
+    /* 手順 4: color を var(--color-text) で設定 */
+}
+
+/* フッター（ボタンエリア） */
+.post-footer {
+    border-top: 1px solid #eee;
+
+    /* 手順 3: margin-top と padding-top を var(--spacing-md) で設定 */
+}
+
+/* 「続きを読む」ボタン */
+.btn-read-more {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+
+    /* 手順 2: font-size: 0.875rem, font-weight: 700 を設定 */
+    /* 手順 3: padding を var(--spacing-sm) var(--spacing-md) で設定 */
+    /* 手順 4: background-color を var(--color-primary) で設定 */
+}

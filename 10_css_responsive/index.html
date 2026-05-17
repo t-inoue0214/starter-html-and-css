@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>レスポンシブデザイン</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="site-logo">Dev Blog</div>
+            <nav class="site-nav" aria-label="メインナビゲーション">
+                <ul class="nav-list">
+                    <li><a href="#" aria-current="page">ホーム</a></li>
+                    <li><a href="#">カテゴリ</a></li>
+                    <li><a href="#">アーカイブ</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="post-list-section">
+            <h1 class="section-title">最新記事</h1>
+
+            <!-- 手順 2: .post-grid に display: flex と flex-wrap: wrap を設定する -->
+            <div class="post-grid">
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">CSS</span>
+                        <h2 class="post-title">Flexbox を使ったレイアウト入門</h2>
+                    </header>
+                    <p class="post-body">
+                        Flexbox は縦・横どちらにでも柔軟にアイテムを並べられる強力なレイアウト手法です。
+                        `display: flex` を親要素に設定するだけで、子要素が横並びになります。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月1日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">デザイン</span>
+                        <h2 class="post-title">デザイナーと話すための色の基礎</h2>
+                    </header>
+                    <p class="post-body">
+                        色相・彩度・明度の三要素を理解すると、デザイナーの意図をより深く理解できるようになります。
+                        CSS では `hsl()` 関数を使うと直感的に色を表現できます。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月5日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">アクセシビリティ</span>
+                        <h2 class="post-title">コントラスト比を理解する</h2>
+                    </header>
+                    <p class="post-body">
+                        WCAG AA 基準では、通常テキストのコントラスト比は 4.5:1 以上が必要です。
+                        DevTools のカラーピッカーで簡単に確認できます。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月10日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">HTML</span>
+                        <h2 class="post-title">セマンティック HTML の重要性</h2>
+                    </header>
+                    <p class="post-body">
+                        `<article>`・`<section>`・`<nav>` などのセマンティックタグを使うと、
+                        スクリーンリーダーや検索エンジンがページの構造を正しく理解できます。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月15日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">CSS</span>
+                        <h2 class="post-title">CSS 変数でデザイントークンを管理する</h2>
+                    </header>
+                    <p class="post-body">
+                        `--color-primary: #3498db;` のような CSS 変数（カスタムプロパティ）を使うと、
+                        デザインの一貫性を保ちながら変更を一箇所にまとめられます。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月20日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+                <article class="post-card">
+                    <header class="post-header">
+                        <span class="post-category">実務</span>
+                        <h2 class="post-title">Figma のデザインデータを CSS に落とし込む</h2>
+                    </header>
+                    <p class="post-body">
+                        Figma の「Inspect」パネルからフォントサイズ・色・余白の数値を読み取り、
+                        CSS に変換する実践的な手順を解説します。
+                    </p>
+                    <footer class="post-footer">
+                        <span class="post-meta">2024年4月25日</span>
+                        <a href="#" class="btn-read-more">続きを読む</a>
+                    </footer>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-text">© 2024 Dev Blog. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

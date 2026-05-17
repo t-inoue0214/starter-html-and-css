@@ -1,0 +1,175 @@
+/* box-sizing: border-box — width の中に padding と border を含めて計算する（実務では必ずこれを書く） */
+* {
+    box-sizing: border-box;
+}
+
+/* --- ベース --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #2c3e50;
+}
+
+/* --- サイトヘッダー --- */
+.site-header {
+    background-color: #2c3e50;
+    padding: 0 40px;
+}
+
+/* --- ナビゲーション --- */
+.site-nav {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-list a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    padding: 4px 0;
+}
+
+.nav-list a:hover {
+    color: #fff;
+}
+
+/* --- メインコンテンツ --- */
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+/* --- お問い合わせフォーム --- */
+.contact-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+.required {
+    color: #e74c3c;
+    margin-left: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #2c3e50;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    border-color: #999;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ヒントテキスト */
+/* 手順 1: コントラスト比を確認・修正する
+   ↓ まず color: #aaa; のままブラウザで開いて DevTools でコントラスト比を確認してください。
+     2:1 程度しかなく、WCAG AA 基準（4.5:1）を大きく下回っています。
+     確認できたら #666 に修正して、コントラスト比が 4.5:1 以上になることを確認してください。 */
+.hint-text {
+    margin: 4px 0 0;
+    font-size: 0.875rem;
+    color: #aaa; /* 悪い例: コントラスト比が低い → #666 に修正する */
+}
+
+/* --- ボタンエリア --- */
+.form-actions {
+    margin-top: 8px;
+}
+
+/* 送信ボタン */
+.btn-submit {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* 手順 2: フォーカスインジケーターを設定する
+   まず以下の2行のコメントを外して Tab キーでページを操作してください。
+   フォーカスが見えなくなり、キーボードユーザーが操作できなくなることを体験します。
+   体験できたら削除して、手順 2 の :focus-visible を書いてください。 */
+/* :focus {
+    outline: none;
+} */
+
+/* 手順 2: フォーカスが見えるようにする
+   Tab キーでフォームを操作したとき、どの要素にフォーカスがあるか分かるように
+   outline を設定してください。
+   例: outline: 3px solid #3498db;
+       outline-offset: 2px; */
+:focus-visible {
+    /* ここに outline を設定する */
+}
+
+/* 手順 3: マウス操作ではフォーカスリングを表示しない
+   :focus-visible はキーボード操作時だけスタイルを適用する疑似クラスです。
+   :focus:not(:focus-visible) でマウスクリック時のフォーカスリングを消せます。
+   手順 2 を終えてから、以下のコメントを外してマウスとキーボードの動作の違いを確認してください。 */
+/* :focus:not(:focus-visible) {
+    outline: none;
+} */
+
+/* 手順 4: 現在のページを示すスタイル
+   index.html のナビゲーションで aria-current="page" が付いている「お問い合わせ」リンクに
+   スタイルを当てて「今どのページにいるか」を視覚的に示してください。
+   例: 白い下線（border-bottom）や文字色を変えるなど */
+.nav-list a[aria-current="page"] {
+    /* ここにスタイルを設定する */
+}
